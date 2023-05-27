@@ -1,6 +1,5 @@
 const oracledb = require('oracledb')
 
-/* Insert three rows */
 const sql = 'SELECT * FROM employee'
 const binds = {}
 const options = {

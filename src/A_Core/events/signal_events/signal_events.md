@@ -1,0 +1,1 @@
+Signal events will also be emitted when Node.js receives POSIX signal events. Let’s take a look at the two most important ones, SIGTERM and SIGUSR1.
