@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\src\\cloud\\aws\\ddb\\read_table.js"
+            "program": "${workspaceFolder}\\src\\databases\\oracle\\main.js"
         }
     ]
 }
