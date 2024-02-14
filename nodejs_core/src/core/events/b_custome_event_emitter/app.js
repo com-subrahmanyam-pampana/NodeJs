@@ -1,12 +1,12 @@
 var Emitter=require('./emmiter');
 var emtr=new Emitter();
-emtr.onEventFired('greet',function(){
+emtr.on('greet',function(){
     console.log("Hi")
 })
-emtr.onEventFired('greet',function(){
+emtr.on('greet',function(){
     console.log("Hi2")
 })
-emtr.onEventFired('eat',function(){
+emtr.on('eat',function(){
     console.log("I am eating")
 })
 emtr.emit("greet")
