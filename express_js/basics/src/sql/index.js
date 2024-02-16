@@ -1,10 +1,13 @@
 const mysql = require("mysql");
-const connection = mysql.createConnection({
+
+
+let connectionInfo ={
   host: "localhost",
   user: "root",
   password: "",
   database: "testDB",
-});
+};
+const connection = mysql.createConnection(connectionInfo);
 
 async function getMovieData(resolve) {
   connection.connect();
