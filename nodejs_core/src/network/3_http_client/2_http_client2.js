@@ -8,8 +8,6 @@ const request1 = {
   method: 'GET'
 };
 
-
-
 http_client.get(request1,function(response){
   let tempData = ""
   response.on('data', (chunk) => {

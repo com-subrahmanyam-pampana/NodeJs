@@ -1,6 +1,7 @@
 const { spawn } = require('child_process');
 
-const child = spawn('node',['sptest.js']);
+const child = spawn('node',['test.js']);
 
-//We are passing "node" as the command and sptest.js in in root folder
-//This will run sptest.js file
+/*We can execute command line like "node test.js" with the child process */
+//We are passing "node" as the command and test.js in in root folder
+//This will run test.js file
