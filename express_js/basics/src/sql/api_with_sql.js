@@ -6,14 +6,14 @@ const app = express();
 let connectionInfo = {
   host: "localhost",
   user: "root",
-  password: "ramaBhanam2",
+  password: "",
   database: "testDB",
 };
 const connection = mysql.createConnection(connectionInfo);
 
 function getMovieData(res) {
   connection.connect();
-  connection.query("SELECT  * FROM movies", (err, rows, fields) => {
+  connection.query("SELECT  * FROM users", (err, rows, fields) => {
     if (err) throw err;
     let result = Object.values(JSON.parse(JSON.stringify(rows)));
     res.send(result);
