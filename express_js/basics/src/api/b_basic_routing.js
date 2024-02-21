@@ -23,14 +23,13 @@ app.get("/", (req, res) => {
 });
 
 /* POST request method  on the root route (/)*/
-app.post('/', (req, res) => {
-  res.send('POST request to the homepage')
-})
+app.post("/", (req, res) => {
+  res.send("POST request to the homepage");
+});
 /*Respond to a PUT request to the /user route */
-app.put('/user', (req, res) => {
-  res.send('Got a PUT request at /user')
-})
-
+app.put("/user", (req, res) => {
+  res.send("Got a PUT request at /user");
+});
 
 app.listen(port, () =>
   console.log(`Hello world app listening on port ${port}!`)
