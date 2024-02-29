@@ -23,5 +23,5 @@ describe('Basic Test',function(){
 
 /*
 To run from command line:
-npx mocha 1.SimpleTest.js
+ mocha simple_test.js
 */
