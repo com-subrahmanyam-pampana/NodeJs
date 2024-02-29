@@ -26,7 +26,10 @@ describe('user',function(){
 
 Types of testing: 
 1.Unit 
-2.Integration
+
+2.Integration:
+While unit tests always take results from a single unit, such as a function call, integration tests may aggregate results from various parts and sources. 
+
 3.End-to-End
 
 Assertion library:
@@ -37,4 +40,14 @@ Assertion library:
 
 test spies:
 stubs :
+A small program routine that substitutes for a longer program which is possible to be loaded later or that is remotely located.
+var fs = require('fs') 
+var writeFileStub = sinon.stub(fs,  
+    'writeFile', function (path, data, cb) {   
+        return cb(null) 
+}) 
+  
+expect(writeFileStub).to.be.called   
+writeFileStub.restore()   
+
 mocks:
