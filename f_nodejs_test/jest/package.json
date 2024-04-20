@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/com-subrahmanyam-pampana/NodeJs#readme",
   "devDependencies": {
+    "jest": "^29.7.0",
     "mocha": "^10.3.0"
-  },
-  "dependencies": {
-    "jest": "^29.7.0"
   }
 }

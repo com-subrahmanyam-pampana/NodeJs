@@ -19,7 +19,9 @@ This will run jest test.It search all jest test js file and run them.
 
 
 
-# Command line
+# Command line:You can also run with "jest" command
 jest my-test --notify --config=config.json
+
+jest tests/async/assertions.jesttest.js
 
 jest E:\PublicRepos\nodejs\src\B_production\unittest\jest\1.SimpleJest.js --notify --config= E:\PublicRepos\nodejs\jest.config.json

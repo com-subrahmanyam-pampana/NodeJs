@@ -16,11 +16,16 @@ test("Wrong way of using callback",()=>{
         expect(data).toBe("subbu")
     }
     fetchData(callback);
+
+    /*The problem is that the test will complete as 
+    soon as fetchData completes, before ever 
+    calling the callback. */
 });
 
-test("Wrong way of using callback",()=>{
+test("Correct way of using callback",()=>{
+    /*Jest will wait until the done callback is called 
+    before finishing the test. */
     function callback(error,data){
-
         if(error){
             jest.done(error);
             return
