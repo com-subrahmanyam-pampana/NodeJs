@@ -1,22 +1,29 @@
 
 const express = require("express");
 const app = express();
+const axios = require('axios');
 
-app.get("/slow", (req, res) => {
-  load(5000);
-  res.send("I took 5 seconds");
-});
 
+/*Simple API:With constant amount of work */
 app.get("/fast", (req, res) => {
   res.send("I am fast");
 });
 
-function load(time) {
-  /*Note this is a sync and a non-blocking operation operation and it is done by Main Thread 
-  of JS */
-  /*JS code. */
-   /* the event loop will get stuck until the operation finished */
+/*API:CPU bound work */
+app.get("/cpu", (req, res) => {
   const start = Date.now();
-  while (Date.now() - start < time) {}
-}
+  while (Date.now() - start < 5000) { }
+  res.send("I took 5 seconds");
+});
+
+app.get("/io", (req, res) => {
+  axios.get('https://reqres.in/api/users?page=2')
+  .then(function (response) {
+    res.send("Network call success");
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+});
+
 app.listen(3000);
